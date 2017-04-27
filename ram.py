@@ -20,7 +20,7 @@ summaryFolderName = "summary/"
 
 if len(sys.argv) == 2:
     simulationName = str(sys.argv[1])
-    print "Simulation name = " + simulationName
+    print("Simulation name = " + simulationName)
     summaryFolderName = summaryFolderName + simulationName + "/"
     saveImgs = True
     imgsFolderName = "imgs/" + simulationName + "/"
@@ -30,7 +30,7 @@ if len(sys.argv) == 2:
     #     os.mkdir(imgsFolderName)
 else:
     saveImgs = False
-    print "Testing... image files will not be saved."
+    print("Testing... image files will not be saved.")
 
 
 start_step = 0
@@ -54,7 +54,7 @@ MNIST_SIZE = 28
 translated_img_size = 60             # side length of the picture
 
 if translateMnist:
-    print "TRANSLATED MNIST"
+    print("TRANSLATED MNIST")
     img_size = translated_img_size
     depth = 3  # number of zooms
     sensorBandwidth = 12
@@ -67,7 +67,7 @@ if translateMnist:
     batch_size = 20
 
 else:
-    print "CENTERED MNIST"
+    print("CENTERED MNIST")
     img_size = MNIST_SIZE
     depth = 1  # number of zooms
     sensorBandwidth = 8
